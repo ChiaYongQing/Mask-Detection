@@ -15,12 +15,9 @@ import matplotlib.pyplot as plt
 import scipy.io
 import skimage.draw
 ```
-### Root directory of the project
+### Setup project directoru
 ```
 ROOT_DIR = os.path.abspath("./Mask_RCNN-master")
-```
-### Data Path
-```
 DATA_PATH = "./project_1b"
 ```
 ### Import Mask RCNN
@@ -33,17 +30,11 @@ from mrcnn import visualize
 from mrcnn.model import log
 
 %matplotlib inline 
-```
-### Directory to save logs and trained model
-```
+
 MODEL_DIR = os.path.join(ROOT_DIR, "logs")
-```
-### Local path to trained weights file
-```
+
 COCO_MODEL_PATH = os.path.join(ROOT_DIR, "mask_rcnn_coco.h5")
-```
-### Download COCO trained weights from releases if needed
-```
+
 if not os.path.exists(COCO_MODEL_PATH):
     utils.download_trained_weights(COCO_MODEL_PATH)
 ```
